@@ -6,10 +6,13 @@ import {
   Scripts,
   ScrollRestoration,
 } from 'remix';
+import styles from 'uikit/dist/css/uikit.css';
 
 export function meta() {
-  return { title: 'New Remix App' };
+  return { title: 'Tips for my friends' };
 }
+
+export const links = () => [{ rel: 'stylesheet', href: styles }];
 
 export default function App() {
   return (
@@ -20,7 +23,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="uk-section">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
